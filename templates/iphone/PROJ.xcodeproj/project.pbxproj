@@ -292,7 +292,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				::end::
+				::if (ENV_CODE_SIGN_IDENTITY)::
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "::ENV_CODE_SIGN_IDENTITY::";
+				::else::
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				::end::
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -323,7 +327,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				::end::
+				::if (ENV_CODE_SIGN_IDENTITY)::
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "::ENV_CODE_SIGN_IDENTITY::";
+				::else::
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				::end::
 				/* COMPRESS_PNG_FILES = NO; */
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
